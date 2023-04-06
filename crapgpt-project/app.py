@@ -4,7 +4,7 @@ import openai
 app = Flask(__name__)
 
 openai.api_key = "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"
-#comment
+#comment1
 def get_chatgpt_response(prompt, temperature=0.7, max_tokens=100):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-0301",
