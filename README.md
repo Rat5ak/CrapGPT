@@ -20,10 +20,8 @@ git clone https://github.com/yourusername/crapgpt.git
 Navigate to the project folder and create a virtual environment to keep all the dependencies for the project isolated:
 
 cd crapgpt
-python3 -m venv venv
 
-mathematica
-Copy code
+python3 -m venv venv
 
 Activate the virtual environment:
 
