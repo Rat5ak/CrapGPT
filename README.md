@@ -26,6 +26,7 @@ On macOS and Linux:
 bash
 Copy code
 source venv/bin/activate
+
 On Windows:
 
 Copy code
@@ -43,6 +44,7 @@ Create a .env file in the root of the project folder to store your environment v
 bash
 Copy code
 touch .env
+
 Open the .env file and add the following lines:
 
 makefile
@@ -62,6 +64,7 @@ Step 6: Deploying to a server (optional)
 If you wish to deploy the chatbot to a web server, you can use the provided Procfile to deploy the application to a platform like Heroku. The Procfile contains the necessary commands for both python app.py and gunicorn app:app.
 
 And now for something completely different...
+
 Enjoy your conversations with the Crap GPT chatbot and don't forget to share the experience with your friends and fellow Monty Python fans!
 
 Remember, "Nobody expects the Spanish Inquisition!" or the Crap GPT chatbot for that matter. Happy chatting!
