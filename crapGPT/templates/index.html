@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crap GPT</title>
+    <!-- Add Bootstrap CSS for styling -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9Mvc0JP" crossorigin="anonymous">
+    <!-- Link the custom CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Crap GPT</h1>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- Chatbox for displaying messages -->
+                <div class="chatbox border p-3 mb-3">
+                    {% for message in messages %}
+                        {% if message.role != 'system' %}
+                            <div class="{{ message.role }}">
+                                <strong>{{ message.role.capitalize() }}:</strong> {{ message.content }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <!-- Form for user input -->
+                <form method="POST" class="input-form">
+                    <input type="text" class="form-control" id="prompt" name="prompt" placeholder="Type your message..." required>
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+                <!-- Button for resetting the chat -->
+                <button class="reset-btn" onclick="location.href='{{ url_for('reset_chat') }}'">Reset Chat</button>
+            </div>
+        </div>
+    </div>
+    <!-- Add Bootstrap JavaScript for interactivity -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSGFpoO9X8x+7X1rK-xs1GYP2QDfDfM6xtDh6blE9+P9c9e8D6r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Gg/z6Y5J6XqqyGXYM2ntX5" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD4Ck5BdPtF+to8xMp9Mvc0JP" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript to scroll chatbox to the bottom -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var chatbox = document.querySelector('.chatbox');
+            chatbox.scrollTop = chatbox.scrollHeight;
+        });
+    </script>
+
+</body>
+</html>

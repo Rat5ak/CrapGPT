@@ -1,0 +1,120 @@
+/* General styles for body and container */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+}
+
+/* Chatbox styles */
+.chatbox {
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+}
+
+/* Common styles for user and assistant messages */
+.user,
+.assistant {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+/* User message styles */
+.user {
+    background-color: #007bff;
+    color: white;
+    float: right;
+    clear: both;
+}
+
+/* Assistant message styles */
+.assistant {
+    background-color: #e9ecef;
+    color: #212529;
+    float: left;
+    clear: both;
+}
+
+/* Jumbotron styles */
+.jumbotron {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .chatbox {
+    max-height: 600px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* Styles for input form */
+.input-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Styles for input text field */
+.form-control {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 24px;
+    border: 1px solid #ced4da;
+    margin-right: 0.5rem;
+}
+
+/* Styles for submit button */
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Styles for reset button */
+.reset-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+}
