@@ -28,8 +28,6 @@ Activate the virtual environment:
 **On macOS and Linux:**
 source venv/bin/activate
 
-graphql
-Copy code
 
 **On Windows:**
 .\venv\Scripts\activate
